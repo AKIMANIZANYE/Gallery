@@ -5,8 +5,8 @@ import datetime as dt
 
 # Create your views here.
 def welcome(request):
-    images = Image.get_images()
-    return render(request, 'welcome.html', {"images":images})
+    # images = Image.get_images()
+    return render(request, 'welcome.html')
 
 def photos_of_day(request):
     date = dt.date.today()

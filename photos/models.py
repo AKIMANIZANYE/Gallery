@@ -61,22 +61,22 @@ class Image(models.Model):
     #     image = Image.objects.get(id=id)
     #     return image
 
-    @classmethod
-    def get_image_by_id(cls, id):
-        image = Image.objects.get(id=id)
-        return image
+    # @classmethod
+    # def get_image_by_id(cls, id):
+    #     image = Image.objects.get(id=id)
+    #     return image
 
-    @classmethod
-    def filter_by_location(cls, id):
-        image = Image.objects.filter(location_id=id).all()
-        return image
+    # @classmethod
+    # def filter_by_location(cls, id):
+    #     image = Image.objects.filter(location_id=id).all()
+    #     return image
 
-    @classmethod
-    def get_images(cls):
-        images = Image.objects.all()
-        return images
+    # @classmethod
+    # def get_images(cls):
+    #     images = Image.objects.all()
+    #     return images
 
-    @classmethod
-    def search_image(cls, category):
-        images = cls.objects.filter(category__name__icontains=category)
-        return images
+    # @classmethod
+    # def search_image(cls, category):
+    #     images = cls.objects.filter(category__name__icontains=category)
+    #     return images
