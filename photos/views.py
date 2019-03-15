@@ -5,7 +5,7 @@ import datetime as dt
 
 # Create your views here.
 def welcome(request):
-    # images = Image.get_images()
+     images = Image.get_images()
     return render(request, 'welcome.html')
 
 def photos_of_day(request):
@@ -38,12 +38,12 @@ def past_days_photos(request, past_date):
         return redirect(photos_of_day)
 
     return render(request, 'all-photos/past-photos.html', {"date": date ,"photos":photos})
-def search_results(request):
+def search_image(request):
 
-    if 'image' in request.GET and request.GET["Image"]:
+    if 'image' in request.GET and request.GET["image"]:
         search_term = request.GET.get("image")
-        searched_articles = Article.search_by_title(search_term)
-        message = f"{search_term}"
+        searched_images = image.search_by_image(category)
+        message = f"{category}"
 
         return render(request, 'all-photos/search.html',{"message":message,"image": searched_image})
 
@@ -56,3 +56,9 @@ def image(request,image_id):
     except DoesNotExist:
         raise Http404()
     return render(request,"all-photos/image.html", {"image":image})           
+def filter_by_location(request,location_id):
+    """
+    Function that filters images by location
+    """
+    images = Image.filter_by_location(id= location_id)
+    return render (request, 'location.html', {"images":images})    
