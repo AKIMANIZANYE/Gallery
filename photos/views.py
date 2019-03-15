@@ -42,3 +42,5 @@ def past_days_photos(request,past_date):
     except ValueError:
         # Raise 404 error when ValueError is thrown
         raise Http404()
+ def welcome(request):
+    return render(request, 'welcome.html')       
