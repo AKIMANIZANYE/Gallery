@@ -5,12 +5,12 @@ import datetime as dt
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('Welcome to the Galley photo')
-
+    return render(request, 'welcome.html')
 
 def photos_of_day(request):
     date = dt.date.today()
     return render(request, 'all-photos/today-photos.html', {"date": date,})
+
 def convert_dates(dates):
 
     # Function that gets the weekday number for the date.
@@ -20,11 +20,10 @@ def convert_dates(dates):
 
     # Returning the actual day of the week
     day = days[day_number]
-    return day  
+    return day    
 
- # Converts data from the string Url
-def past_days_photos(request,past_date):
-       
+def past_days_photos(request, past_date):
+
     try:
         # Converts data from the string Url
         date = dt.datetime.strptime(past_date, '%Y-%m-%d').date()
@@ -35,7 +34,6 @@ def past_days_photos(request,past_date):
         assert False
 
     if date == dt.date.today():
-        return redirect(news_of_day)
+        return redirect(photos_of_day)
 
-    return render(request, 'all-photos/past-photos.html', {"date": date})
-     
+    return render(request, 'all-photos/past-photos.html', {"date": date ,"photos":photos})
