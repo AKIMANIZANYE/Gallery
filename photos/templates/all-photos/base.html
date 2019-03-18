@@ -6,20 +6,21 @@
   <meta charset="utf-8">
 
   {% if title %}
-  <title>Moringa Tribune - {{title}}</title>
+  <title>Gallery picturess - {{title}}</title>
   {% else %}
-    <title> Moringa Tribune </title>
+    <title>Gallery picturess </title>
   {% endif %}
 
   {% block styles %}
     {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'pics.css' %}">
   {% endblock %}
 
 </head>
 <body>
     {% include "navbar.html" %}
 
-    {% block content %}  {%endblock%}
+    {% block content %}  Gallery {%endblock%}
 
     {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

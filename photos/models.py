@@ -1,5 +1,5 @@
 from django.db import models
-
+import datetime as dt
 # Create your models here.
 class Location(models.Model):
     """
@@ -40,7 +40,7 @@ class Image(models.Model):
     """
     Class that contains details concerning the image itself
     """
-    photo = models.ImageField(upload_to = 'images/')
+    photo = models.ImageField(upload_to = 'galley/')
     name = models.CharField(max_length = 25)
     description = models.TextField()
     location = models.ForeignKey(Location)
@@ -56,33 +56,30 @@ class Image(models.Model):
     def delete_image(self):
         self.save()
 
-    # @classmethod
-    # def get_image_by_id(cls, id):
-    #     image = Image.objects.get(id=id)
-    #     return image
+    @classmethod
+    def get_image_by_id(cls, id):
+        image = Image.objects.get(id=id)
+        return image
 
-    # @classmethod
-    # def get_image_by_id(cls, id):
-    #     image = Image.objects.get(id=id)
-    #     return image
+    @classmethod
+    def get_image_by_id(cls, id):
+        image = Image.objects.get(id=id)
+        return image
 
-    # @classmethod
-    # def filter_by_location(cls, id):
-    #     image = Image.objects.filter(location_id=id).all()
-    #     return image
+    @classmethod
+    def filter_by_location(cls, id):
+        image = Image.objects.filter(location_id=id).all()
+        return image
 
-    # @classmethod
-    # def get_images(cls):
-    #     images = Image.objects.all()
-    #     return images
+    @classmethod
+    def get_images(cls):
+        images = Image.objects.all()
+        return images
 
     @classmethod
     def search_image(cls, category):
         images = cls.objects.filter(category__name__icontains=category)
-        return photos
-        # @classmethod
-    # def search_by_title(cls,search_term):
-    #    photos = cls.objects.filter(title__icontains=search_term)
-    #    return photos 
+        return images
+   
 
  
