@@ -32,3 +32,10 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'search.html',{"message":message})
+def display_images_categories(request):    
+   photos = Image.category()
+   return render(request, 'category.html', {"photos":photos}) 
+
+def display_images_locations(request):    
+   photos = Image.location()
+   return render(request, 'location.html', {"photos":photos})        
