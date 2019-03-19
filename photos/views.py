@@ -22,10 +22,11 @@ def image(request,image_id):
 
 def search_results(request):
 
-    if 'Image' in request.GET and request.GET["Image"]:
-        search_term = request.GET.get("Image")
-        searched_images = Image.search_by_category(search_term)
-        message = f"{search_term}"
+    if 'image' in request.GET and request.GET["image"]:
+        search_input = request.GET.get("image")
+        searched_images = Image.search_by_category(search_input)
+        # print(searched_images)
+        message = f"{search_input}"
 
         return render(request, 'search.html',{"message":message,"images": searched_images})
 
@@ -33,9 +34,9 @@ def search_results(request):
         message = "You haven't searched for any term"
         return render(request, 'search.html',{"message":message})
 def display_images_categories(request):    
-   photos = Image.category()
+   photos = Image.category(1)
    return render(request, 'category.html', {"photos":photos}) 
 
 def display_images_locations(request):    
-   photos = Image.location()
+   photos = Image.location(2)
    return render(request, 'location.html', {"photos":photos})        

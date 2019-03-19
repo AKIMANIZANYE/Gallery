@@ -55,6 +55,8 @@ class Image(models.Model):
 
     def delete_image(self):
         self.save()
+    def update_image(self, **kwargs):
+        self.objects.filter(id = self.pk).update(**kwargs)     
 
     @classmethod
     def get_image_by_id(cls, id):
@@ -77,9 +79,16 @@ class Image(models.Model):
         return images
 
     @classmethod
-    def search_image(cls, category):
-        images = cls.objects.filter(category__name__icontains=category)
+    def search_by_category(cls,seacrh_input):
+        images = cls.objects.filter(category__name__icontains=seacrh_input)
         return images
+    def location (cls, id):
+        image = Image.objects.filter(name).all()
+        return image
+    @classmethod   
+    def category (cls, id):
+        image = Image.objects.get(name)
+        return image        
    
 
  
