@@ -9,7 +9,7 @@ class LocationTestClass(TestCase):
 
     # Set up method
     def setUp(self):
-        self.wecode= Location(name = 'Rwanda', description='Kigali')
+        self.wecode= Location()
     # Testing  instance
     def test_instance(self):
         self.assertTrue(isinstance(self.wecode,Location))
@@ -22,7 +22,7 @@ class LocationTestClass(TestCase):
 class CategoryTestClass(TestCase):
     # Set up method
     def setUp(self):
-        self.wecode= Category(name = 'Travel', description='Travel to kivu')
+        self.wecode= Category()
     # Testing  instance
     def test_instance(self):
         self.assertTrue(isinstance(self.wecode,Category))
