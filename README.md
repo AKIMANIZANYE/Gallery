@@ -1,6 +1,6 @@
 ## project name
  Gallery
- Author: Claudine Akimanizanye <akimanizanye.claudine@gmail.com> and https://github.com/AKIMANIZANYE/Gallery.git
+ Author: Claudine Akimanizanye <akimanizanye.claudine@gmail.com>, https://galleryc.herokuapp.com/and https://github.com/AKIMANIZANYE/Gallery.git
  Date:   Fri Mar 15 15:58:24 2019 +0200
 
 
@@ -33,7 +33,7 @@ Flask
 Boostrap
 
 ## contact
-Emails:akimanizanyeclaudine@gmail.com Phone:098766544 Emails:akimanizanyeclaudine@akilahinstitute.org Repositority:https://github.com/AKIMANIZANYE/Gallery.git
+Emails:akimanizanyeclaudine@gmail.com Phone:098766544 Emails:akimanizanyeclaudine@akilahinstitute.org Repositority:https://github.com/AKIMANIZANYE/Gallery.git amd thelink of the heroku : https://galleryc.herokuapp.com/
 # #License and Copyright
 
 .Permision of reading code     .You are not allowed to edit any file
