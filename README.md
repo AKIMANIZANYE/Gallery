@@ -6,11 +6,11 @@
 
 
 ## Descrption of the project
-This is project bwuld  within  Django app for creating and managing photos and photo galleries, but with a PostgreSQL twist. It was made to show off some of the advanced PostgreSQL features,  administror  can be able to  add another  image 
+This is project bwuld  within  Django app for creating and managing photos and photo galleries, but with a PostgreSQL twist. It was made to show off some of the advanced PostgreSQL features,  administror  can be able to  add another  image add location and category
 
 ## installation steps
 $ git clone 
-$ cd blog
+$ cd gallery 
 $ source virtual/bin/activate
 Inside the manage.py module change 
 ## Instrcuction
@@ -29,7 +29,7 @@ View photos based on the location they were taken.
 Ptyhon3.6 
 HTML
 CSS
-Flask
+Django
 Boostrap
 
 ## contact
