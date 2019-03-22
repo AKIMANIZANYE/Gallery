@@ -1,5 +1,4 @@
-## project name
- Gallery
+## project name:Gallery
  Author: Claudine Akimanizanye <akimanizanye.claudine@gmail.com>, https://galleryc.herokuapp.com/and https://github.com/AKIMANIZANYE/Gallery.git
  Date:   Fri Mar 15 15:58:24 2019 +0200
 
@@ -22,7 +21,7 @@ Search for different categories of photos.
 Copy a link of a single photo.
 View photos based on the location they were taken.
 
-## Technologu Used
+## Technology  Used
 *This application was made with Python version 3.6 using the django framework.
 *The templates were made using html and was styled using css and bootstrap 3.
 *The database used was postgresql, it was edited using visual studio code and deployed to heroku.
